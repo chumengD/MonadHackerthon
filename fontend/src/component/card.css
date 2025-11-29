@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'PressStart2P-1';
+    src: url('./fonts/PressStart2P-1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pixellari';
+    src: url('./fonts/Pixellari.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  font-family:'PressStart2P-1',Pixellari;
+}
+
+body {
+  margin: 0;
+  background-color: #f0f0f0; 
+  font-family: sans-serif;
+}
+
+
+/* 卡片组件样式 */
+.puzzle-card {
+  width: 23rem;
+  border: 0.25rem solid #707070;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+/* 卡片顶部和底部文字行 */
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.2rem;
+}
+
+.card-row.bottom {
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+
+.card-image-placeholder {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  border: 3px solid #999;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  font-size: 14px;
+}
