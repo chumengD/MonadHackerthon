@@ -1,45 +1,72 @@
 import './createPuzzle.css';
 import { useContent } from '../hooks/context';
+import { FileUpload } from 'primereact/fileupload';
+//上传图片的api还没有写    create按钮的上传函数没写
 
 export function CreateGuess(){
-    const {isCreate,setIsCrrate} = useContent()
+
+    const {isCreate,setIsCreate,CreateInputValue,setCreateInputValue,enterFee,setEnterFee,hardInputValue,nameInputValue,setHardInputValue,setNameInputValue,answerInputValue,setAnswerInputValue,setDscri,descri} = useContent()
+    function onUpload(){
+      console.log("上传成功！")
+    }
+    function handleClick(){
+      upload(CreateInputValue)
+      setCreateInputValue([])
+      alert('上传成功!')
+    }
   return (
     isCreate?
     <div className="modal-container">
       {/* Header */}
       <div className="modal-header">
         <span className="modal-title">create</span>
-        <button className="close-btn" onClick={()=>{setIsCrrate(0)}}>X</button>
+        <button className="close-btn" onClick={()=>{setIsCreate(0)}}>X</button>
       </div>
 
       {/* Main Content */}
       <div className="modal-content">
         
-        {/* Large Placeholder Box */}
-        <div className="placeholder-box">
-          <span>xxxxxxxxxxxxxx</span>
-          <span>xxxxxxxxxxxxxx</span>
+        <div className='input'>
+          <p className='puzzle'>puzzle</p>
+         <input type="text" Value={CreateInputValue}  onchange={(e)=>{setCreateInputValue(e.target.value)}} className="placeholder-box1"/>
+         <p className='answer'>answer</p>
+         <input type="text" Value={answerInputValue}  onchange={(e)=>{setAnswerInputValue(e.target.value)}} className="placeholder-box2"/>
+         <p className='tip'>tip</p>
+         <input type="text" Value={answerInputValue}  onchange={(e)=>{setAnswerInputValue(e.target.value)}} className="placeholder-box2"/>
+         
+         
         </div>
-
         {/* Controls Row */}
         <div className="controls-row">
           {/* Left: Prize Input */}
           <div className="prize-group">
-            <label>prize:</label>
-            <input type="text" defaultValue="xx" className="prize-input" />
-          </div>
-
+            <div>
+              <label>prize:<input type="text" defaultValue="0.1" className="prize-input" /> mon</label>
+            </div>
+            <div>
+              <label>enter-fee:<input type="text" Value={enterFee} onChange={(e)=>{setEnterFee(e.target.value)}} className="prize-input" /> mon</label>
+            </div>
+            <div>
+              <label>puzzle-Name:<input type="text" Value={nameInputValue} onChange={(e)=>{setNameInputValue(e.target.value)}} className="prize-input" /></label>
+            </div>
+            <div>
+              <label>hard-level:<input type="text" Value={hardInputValue} onChange={(e)=>{setHardInputValue(e.target.value)}} className="prize-input" /></label>
+            </div>      
+            <div><label>level:easy,middle,hard</label></div>              
+        </div>
+        
+        
           {/* Right: Upload Button & Text */}
           <div className="upload-group">
-            <button className="upload-btn">upload image</button>
-            <span className="helper-text">default create by AI</span>
+            <span className="upload-btn"><FileUpload  mode="basic" name="demo[]" url="/api/upload" accept="image/*" maxFileSize={1000000} onUpload={onUpload} auto chooseLabel="upload" /></span>
+            <span className="helper-text">default created by AI</span>
           </div>
         </div>
       </div>
 
       {/* Footer Button */}
       <div className="footer">
-        <button className="create-btn">create</button>
+        <button className="create-btn" onClick={handleClick}>create</button>
       </div>
     </div>:<></>
   );

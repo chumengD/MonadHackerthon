@@ -4,7 +4,6 @@ export const Card = ({
   title = "puzzle", 
   status = "status", 
   imageLabel = "picture", 
-  level = "hard", 
   people = "people" 
 }) => {
   return (
@@ -21,7 +20,6 @@ export const Card = ({
       </div>
 
       <div className="card-row bottom">
-        <span>{level}</span>
         <span>{people}</span>
       </div>
     </div>

@@ -10,12 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.23.0",
     "@rainbow-me/rainbowkit": "^2.2.9",
     "@tanstack/react-query": "^5.90.11",
+    "ai": "^5.0.104",
+    "primeicons": "^7.0.0",
+    "primereact": "^10.9.7",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "viem": "^2.40.3",
-    "wagmi": "^2.19.4"
+    "wagmi": "^2.19.4",
+    "x402-axios": "^0.7.2",
+    "x402-mcp": "^0.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

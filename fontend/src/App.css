@@ -54,3 +54,10 @@
     flex-wrap: wrap;
 }
 
+.createPuzzle{
+    position: absolute;
+    top:0.8rem;
+    right:8rem;
+    border: solid rgb(117,117,117) 0.2rem ;
+     border-radius: 0.4rem;
+}
