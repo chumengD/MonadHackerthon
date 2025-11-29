@@ -1,20 +1,20 @@
 # Node modules
-/node_modules
+./backend/node_modules
 
 # Compilation output
-/dist
+./backend/dist
 
 # pnpm deploy output
-/bundle
+./backend/bundle
 
 # Hardhat Build Artifacts
-/artifacts
+./backend/artifacts
 
 # Hardhat compilation (v2) support directory
-/cache
+./backend/cache
 
 # Typechain output
-/types
+./backend/types
 
 # Hardhat coverage reports
-/coverage
+./backend/coverage
