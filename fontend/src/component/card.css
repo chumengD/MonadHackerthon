@@ -15,6 +15,7 @@
 * {
   box-sizing: border-box;
   font-family:'PressStart2P-1',Pixellari;
+  font-size: large;
 }
 
 body {
@@ -61,4 +62,9 @@ body {
   justify-content: center;
   color: #333;
   font-size: 14px;
+}
+
+.people{
+  position: relative;
+  top:0.2rem;
 }

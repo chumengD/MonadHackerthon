@@ -23,7 +23,7 @@ export const Card = ({
       </div>
 
       <div className="card-row bottom">
-        <span>{people}</span>
+        <span>参与人数：<span className="people">{people}</span></span>
         <span>{status}</span>
         
       </div>

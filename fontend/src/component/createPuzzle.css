@@ -42,7 +42,8 @@
 /* CreateModal.css */
 .modal-container {
   box-sizing: border-box;
-  width: 40rem;
+  width: 45rem;
+  height: 42rem;
   border: 4px solid #666; /* 模拟线框图的粗边框 */
   border-radius: 12px;
   padding: 20px;
@@ -183,6 +184,7 @@
   cursor: pointer;
   margin-bottom: 5px;
   color: #333;
+  max-width: 25rem;
 }
 
 .helper-text {
@@ -198,7 +200,7 @@
 
 .create-btn {
   position:relative;
-  top:0rem;
+  top:-2rem;
   width: 180px;
   padding: 10px 0;
   border: 3px solid #666;
@@ -236,18 +238,23 @@
 }
 .answer{
   position: absolute;
-  top:8.7rem;
+  top:7.9rem;
   left:2rem
 }
 
 .tip{
     position: absolute;
-  top:14.5rem;
+  top:13rem;
   left:2rem
 }
 
 .des{
   position: absolute;
-  top:20rem;
+  top:17.9rem;
+  left:2rem
+}
+.puzzleName{
+  position: absolute;
+  top:23rem;
   left:2rem
 }

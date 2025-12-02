@@ -27,7 +27,7 @@ const data= [
         prize:3,
         enterFee:0.15,
         pictureUrl:"https://",
-        status:"未揭秘",
+        status:"已揭秘",
         people:333,
     }    
 ]
@@ -38,14 +38,16 @@ export function Cards(){
     const response =  await fetch(https:/)
     data = await response.json()
 }*/
-    const {setIsGuess,setDescription} = useContent()
+    const {setIsGuess,setDescription,setStatus,setEnterFee} = useContent()
     return (
         <div>
         {data.map((card)=>{
           return <button  onClick={()=>{
+            setStatus(card.status)
             setDescription(card.description)
+            setEnterFee(card.enterFee)
             setIsGuess(1)
-          }}><Card  title={card.title} number={card.number} people={data.people} status={data.status} picture={data.pictureUrl}/></button>
+          }}><Card  title={card.title} number={card.number} people={card.people} status={card.status} picture={data.pictureUrl}/></button>
         })}
         </div>
     )
