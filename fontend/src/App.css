@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'fusion';
+    src: url('./fonts/fusion-pixel-12px-monospaced-zh_hans.otf.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .Frame-Border{
   position: absolute;
   top: 0.5rem;
@@ -25,7 +32,7 @@
 
 .home{
     position: absolute;
-    font-family: 'PressStart2P-1';
+    font-family: 'PressStart2P-1',Pixellari,fusion;
     font-size: 2rem;
     top:0rem;
     left:0.6rem;

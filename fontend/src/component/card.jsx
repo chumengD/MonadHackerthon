@@ -1,26 +1,31 @@
 import "./card.css"
 
 export const Card = ({ 
-  title = "puzzle", 
+  title = "puzzle title", 
   status = "status", 
-  imageLabel = "picture", 
-  people = "people" 
+  pictureUrl, 
+  people = "people" ,
+  number = "number"
 }) => {
   return (
     <div className="puzzle-card">
       {/* 顶部信息 */}
       <div className="card-row">
+        <span>{number}</span>
         <span>{title}</span>
-        <span>{status}</span>
+        
+        
       </div>
 
       {/* 图片区域 */}
       <div className="card-image-placeholder">
-        {imageLabel}
+      <img src={pictureUrl} alt="picture of puzzle" />
       </div>
 
       <div className="card-row bottom">
         <span>{people}</span>
+        <span>{status}</span>
+        
       </div>
     </div>
   );

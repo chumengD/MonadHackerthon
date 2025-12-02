@@ -1,21 +1,24 @@
-import './create.css';
+import './createPuzzle.css';
 import { useContent } from '../hooks/context';
 import { FileUpload } from 'primereact/fileupload';
+import { message } from "antd"
 //上传图片的api还没有写    create按钮的上传函数没写
 
 export function CreateGuess(){
 
-    const {isCreate,setIsCreate,CreateInputValue,setCreateInputValue,enterFee,setEnterFee,nameInputValue,setNameInputValue,answerInputValue,setAnswerInputValue,tipInputValue,setTipInputValue,setDscri,descri} = useContent()
+    const {isCreate,setIsCreate,CreateInputValue,setCreateInputValue,enterFee,setEnterFee,nameInputValue,setHardInputValue,setNameInputValue,answerInputValue,setAnswerInputValue,tipInputValue,setTipInputValue,setDscri,descri} = useContent()
     function onUpload(){
       console.log("上传成功！")
     }
     function handleClick(){
+      message.success(`你好，后面还没写呢`)
       upload(CreateInputValue)
       setCreateInputValue([])
       alert('上传成功!')
     }
   return (
     isCreate?
+    <div className='modal-overlay'>
     <div className="modal-container">
       {/* Header */}
       <div className="modal-header">
@@ -68,7 +71,9 @@ export function CreateGuess(){
       <div className="footer">
         <button className="create-btn" onClick={handleClick}>create</button>
       </div>
-    </div>:<></>
+    </div>
+    </div>
+    :<></>
   );
 };
 

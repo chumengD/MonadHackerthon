@@ -19,6 +19,7 @@ export function ContentProvider({children}){
     const [x402Response,setX402Response] =useState(null)
     const [tipInputValue,setTipInputValue] =useState([])    
     const [descri,setDscri] = useState([])
+    const [description ,setDescription] = useState('这是还没有设置的description')
     const valueToShare ={
         isGuess:isGuess,
         setIsGuess:setIsGuess,
@@ -48,6 +49,8 @@ export function ContentProvider({children}){
         setTipInputValue:setTipInputValue,
         descri:descri,
         setDscri:setDscri,
+        description:description,
+        setDescription:setDescription,
 
     }
     return (

@@ -16,8 +16,11 @@ import { useContent } from '../hooks/context';
 
 /* 缺失一个函数，返回content，tip  */
 
-export function GuessPuzzle({content="xxxxxxxxxxxxxx",description="xxxxxxxxxx"}){
-    const {isGuess,setIsGuess,guessInputValue,setGuessInputValue,userAddress,} = useContent()
+
+
+export function GuessPuzzle({content,tip="xxxxlockedxxx"}){
+    const {isGuess,setIsGuess,guessInputValue,setGuessInputValue,userAddress,description} = useContent()
+  
   return (
     isGuess?
     <div className="modal-overlay">
@@ -42,8 +45,9 @@ export function GuessPuzzle({content="xxxxxxxxxxxxxx",description="xxxxxxxxxx"})
             }}>join in</button>
             
             <div className="fee-info">
-              <div>joinFee:0.5mon</div>
-              <div className='descri'>description:{description}</div>
+              <div>joinFee:0.1mon</div>
+              {console.log(`description:${description}`)}
+              <div className='descri'>description: <br/> {description}</div>
             </div>
           </div>
 
@@ -51,7 +55,7 @@ export function GuessPuzzle({content="xxxxxxxxxxxxxx",description="xxxxxxxxxx"})
           <div className="right-tips">
             
             <div className="tips-box">
-              <span className="tips-label">tips:</span>
+              <span className="tips-label">tip:{tip}</span>
               
             </div>
           </div>
