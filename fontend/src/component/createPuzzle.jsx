@@ -1,7 +1,6 @@
 import './createPuzzle.css';
 import { useContent } from '../hooks/context';
 import { FileUpload } from 'primereact/fileupload';
-import { Toast } from 'primereact/toast';
 import { message } from "antd"
 //上传图片的api还没有写    create按钮的上传函数没写
 
@@ -30,7 +29,7 @@ export function CreateGuess(){
             })
           const responseData = await response.json()
           message.success(`上传状态：`,responseData)
-            }catch(error){message.error(`error:`,error)}      
+            }catch(error){message.error(`error:${error}`,2)}      
     }
   return (
     isCreate?
@@ -72,13 +71,6 @@ export function CreateGuess(){
             </div>
            
         </div>
-          {/* Right: Upload Button & Text */}
-          <div className="upload-group">
-            <span className="upload-btn">
-              
-             <FileUpload onUpload={onUpload} name="picture" url={'https:/create_rid'} multiple accept="image/*" maxFileSize={10000000} emptyTemplate={<p className="m-0">Drag and drop files to here.</p>} /></span>
-          
-          </div>
         </div>
       </div>
 

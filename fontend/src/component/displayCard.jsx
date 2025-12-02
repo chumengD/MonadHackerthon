@@ -4,9 +4,8 @@
 //const data = getCard()
 import {Card} from "./card"
 import { useContent } from "../hooks/context"
-import { GuessPuzzle } from "./guessPuzzle"
 
-
+/*
 const data= [
     {
         number:1,
@@ -31,13 +30,13 @@ const data= [
         people:333,
     }    
 ]
-
+*/
 export function Cards(){
-    /*let data
+    let data
     async function getData(){
-    const response =  await fetch(https:/)
+    const response =  await fetch("https:/")
     data = await response.json()
-}*/
+}
     const {setIsGuess,setDescription,setStatus,setEnterFee} = useContent()
     return (
         <div>

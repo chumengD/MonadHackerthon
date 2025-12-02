@@ -1,7 +1,6 @@
 import React from 'react';
 import './guessPuzzle.css';
 import { useContent } from '../hooks/context';
-import { useWriteContract } from 'wagmi';
 import {message} from "antd"
 //import {Hash} from "../hooks/"
 // join函数
@@ -53,7 +52,7 @@ export function GuessPuzzle(){
             setIsRight(data)  
             if(isRight) {
               message.success(`答案正确！！！！！！`)}
-              else message.error(`答案错误`)}catch(error){message.error(`error:`,error)}
+              else message.error(`答案错误`)}catch(error){message.error(`error:${error}`,2)}
             
     }
     async function join(){
